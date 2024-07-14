@@ -1,7 +1,7 @@
-FROM archlinux:latest as build
+FROM obarun/base:latest as build
 
 RUN yes | pacman -Syy
-RUN yes | pacman -S jdk17-openjdk jre17-openjdk
+RUN yes | pacman -S jdk17-openjdk 
 
 COPY . .
 RUN chmod +x ./gradlew
