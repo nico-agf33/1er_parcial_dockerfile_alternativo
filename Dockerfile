@@ -1,6 +1,6 @@
 FROM openmamba/openmamba:latest as build
 
-RUN dnf -y check-update
+RUN dnf -y update
 RUN dnf -y install java-17-openjdk java-17-openjdk-devel
 
 COPY . .
