@@ -1,7 +1,7 @@
-FROM obarun/base:latest as build
+FROM openmamba/openmamba:latest as build
 
-RUN yes | pacman -Syy
-RUN yes | pacman -S jdk17-openjdk 
+RUN dnf check-update
+RUN dnf -y install java-17-openjdk java-17-openjdk-devel
 
 COPY . .
 RUN chmod +x ./gradlew
