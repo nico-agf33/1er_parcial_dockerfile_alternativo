@@ -1,7 +1,7 @@
 FROM openmamba/openmamba:latest as build
 
 RUN dnf -y update
-RUN dnf -y install java-openjdk17 ca-certificates
+RUN dnf -y install java-openjdk17 ca-certificates openssh openssl
 
 COPY . .
 RUN chmod +x ./gradlew
